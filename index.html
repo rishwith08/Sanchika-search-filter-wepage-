@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanchika</title>
+    <!-- Premium Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Caveat:wght@700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- SVG Icon Integration utilizing Lucide via CDN since it is a raw HTML environment -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Top Progress Line for Theme Toggling -->
+    <div id="top-progress-bar" class="top-bar"></div>
+
+    <!-- Sticky Header -->
+    <header class="main-header" id="header">
+      <div class="header-container">
+        <!-- Logo Area -->
+        <a href="#home" class="logo-area" id="brand-logo-link">
+          <div class="logo-icon-wrapper hero-indigo-glow">
+            <svg viewBox="0 0 132 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="sanchika-brand-logo-svg">
+              <!-- Arcs (Suitcase Handle) -->
+              <path d="M 46,15 A 20,20 0 0,1 86,15" stroke="#0e4429" stroke-width="4.5" stroke-linecap="round" fill="none" />
+              <path d="M 52,15 A 14,14 0 0,1 80,15" stroke="#b59648" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              
+              <!-- Suitcase Body rounded rect -->
+              <rect x="10" y="14" width="112" height="34" rx="7" fill="#ffffff" stroke="#b59648" stroke-width="3" />
+              
+              <!-- Telugu Text 'సంచిక' -->
+              <text x="66" y="34" font-family="'Noto Sans Telugu', 'Gidugu', 'NTR', 'Gautami', 'sans-serif'" font-size="20" font-weight="700" fill="#0e4429" text-anchor="middle">‘సంచిక’</text>
+              
+              <!-- Subtitle Text "THE MEMORY EDITION" -->
+              <text x="66" y="43" font-family="'Inter', 'Space Grotesk', sans-serif" font-size="6.5" font-weight="800" fill="#1f2937" letter-spacing="0.8" text-anchor="middle">THE MEMORY EDITION</text>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-brand text-white">Sanchika</span>
+            <span class="logo-tag text-amber-400">Bags</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="desktop-nav" id="desktop-nav-menu">
+          <a href="#home" class="nav-link active text-white font-sans">Home</a>
+          <a href="#catalog" class="nav-link text-white font-sans">Catalog</a>
+        </nav>
+
+        <!-- Dynamic Utilities: Dark Mode & Cart & Contact Shortcuts -->
+        <div class="header-utilities">
+          <!-- Light/Dark Mode Switcher -->
+          <button id="theme-toggle-btn" class="utility-btn text-white-all" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+            <i data-lucide="moon" class="theme-icon mode-moon"></i>
+            <i data-lucide="sun" class="theme-icon mode-sun hidden"></i>
+          </button>
+
+          <!-- Simple Catalog Bookmark / Counter -->
+          <div class="bookmark-badge-wrapper utility-btn bg-glow-white" id="catalog-bookmark-btn" title="Saved Bags">
+            <i data-lucide="heart" class="heart-icon text-white"></i>
+            <span id="bookmark-count" class="badge-count">0</span>
+          </div>
+
+          <!-- Contact Direct Button (Phone Dialer Shortcut) -->
+          <a href="tel:6309545434" class="contact-cta-btn" id="header-whatsapp-cta">
+            <i data-lucide="phone"></i>
+            <span>Call Us</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle button -->
+          <button id="mobile-menu-toggle" class="mobile-toggle-btn white-hamb" aria-label="Toggle Mobile Navigation">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Sidebar Navigation -->
+    <div id="mobile-drawer" class="mobile-drawer-overlay">
+      <div class="drawer-content">
+        <div class="drawer-header">
+          <div class="logo-area">
+            <div class="logo-icon-wrapper small">
+              <i data-lucide="shopping-bag" class="logo-icon"></i>
+            </div>
+            <span class="logo-brand">Sanchika Bags</span>
+          </div>
+          <button id="mobile-drawer-close" class="drawer-close-btn" aria-label="Close menu">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <nav class="drawer-nav">
+          <a href="#home" class="drawer-link active">Home</a>
+          <a href="#catalog" class="drawer-link">Catalog</a>
+          
+          <!-- Mobile Utilities inside Drawer -->
+          <div class="drawer-utilities-row">
+            <button id="mobile-theme-toggle" class="drawer-utility-item-btn" title="Toggle Theme" aria-label="Toggle Theme">
+              <i data-lucide="moon" class="drawer-item-icon m-mode-moon"></i>
+              <i data-lucide="sun" class="drawer-item-icon m-mode-sun hidden"></i>
+              <span class="m-theme-label-txt">Dark Mode</span>
+            </button>
+            <button id="mobile-catalog-bookmark" class="drawer-utility-item-btn" title="Saved Bags" aria-label="View Saved Bags">
+              <i data-lucide="heart" class="drawer-item-icon text-rose-500"></i>
+              <span>Favorites (<span id="mobile-bookmark-count">0</span>)</span>
+            </button>
+          </div>
+        </nav>
+        <div class="drawer-footer">
+          <p>Premium Quality and Style Handcrafted for You</p>
+          <div class="social-icons">
+            <a href="tel:6309545434" class="social-icon" title="Call Us"><i data-lucide="phone"></i></a>
+            <a href="https://instagram.com" class="social-icon" target="_blank" rel="noreferrer"><i data-lucide="instagram"></i></a>
+            <a href="mailto:info@sanchikabags.com" class="social-icon"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content wrapper -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <!-- SVG Doodle Art Canvas Overlay for chalkboard space doodles -->
+        <div class="hero-doodles-container">
+          <!-- Star doodles absolute positioning across the workspace -->
+          <svg class="doodle star-1" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="doodle star-2" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-dasharray="2 2"/></svg>
+          <svg class="doodle star-3 filled" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="doodle star-4_glow" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="currentColor"><circle cx="12" cy="12" r="3" /></svg>
+          
+          <!-- Cute astronaut or space planet sketch -->
+          <svg class="doodle space-planet" viewBox="0 0 100 100" width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.5">
+            <!-- Saturn Ring -->
+            <path d="M10 50 C20 30, 80 30, 90 50 C80 70, 20 70, 10 50 Z" />
+            <!-- Planet Sphere -->
+            <circle cx="50" cy="50" r="28" />
+            <path d="M30 40 C40 45, 60 45, 70 40" stroke-dasharray="2 2" />
+            <path d="M25 50 C35 55, 65 55, 75 50" />
+            <path d="M32 60 C42 65, 58 65, 68 60" stroke-dasharray="1 3" />
+          </svg>
+          
+          <!-- Rocket cartoon drawing flying upward -->
+          <svg class="doodle flight-rocket" viewBox="0 0 64 64" width="100" height="100" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M32 8 C32 8, 44 20, 44 38 L20 38 C20 38, 20 20, 32 8 Z" />
+            <!-- Fins -->
+            <path d="M20 34 L12 44 L20 40 Z" />
+            <path d="M44 34 L52 44 L44 40 Z" />
+            <path d="M32 38 L32 44" />
+            <!-- Porthole -->
+            <circle cx="32" cy="24" r="5" />
+            <!-- Flame tails -->
+            <path d="M26 44 C26 52, 32 56, 32 56 C32 56, 38 52, 38 44 Z" />
+          </svg>
+
+          <!-- Shooting Meteor drawing -->
+          <svg class="doodle crash-meteor" viewBox="0 0 100 100" width="90" height="90" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="70" cy="30" r="12" />
+            <path d="M15 85 L54 44" stroke-dasharray="3 3" />
+            <path d="M25 85 L58 52" />
+            <path d="M15 75 L48 40" />
+            <circle cx="66" cy="26" r="2" fill="currentColor" />
+            <circle cx="74" cy="34" r="1.5" fill="currentColor" />
+          </svg>
+
+          <!-- Doodled Planet with craters -->
+          <svg class="doodle crater-planet" viewBox="0 0 100 100" width="110" height="110" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="50" cy="50" r="35" />
+            <circle cx="35" cy="40" r="6" stroke-dasharray="2 1" />
+            <circle cx="65" cy="45" r="9" />
+            <circle cx="48" cy="68" r="5" />
+            <circle cx="60" cy="65" r="3" />
+          </svg>
+
+          <!-- Constellation lines -->
+          <svg class="doodle constellation-lines" viewBox="0 0 200 150" width="200" height="150" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6">
+            <circle cx="34" cy="24" r="3" fill="currentColor" />
+            <circle cx="94" cy="54" r="3" fill="currentColor" />
+            <circle cx="154" cy="44" r="3" fill="currentColor" />
+            <circle cx="124" cy="114" r="3" fill="currentColor" />
+            <path d="M34 24 L94 54 L154 44 M94 54 L124 114" />
+          </svg>
+
+          <!-- Playful school pencil drawing -->
+          <svg class="doodle school-pencil" viewBox="0 0 48 48" width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 36 L12 40 L40 12 L36 8 Z" />
+            <path d="M8 36 L4 44 L12 40" />
+            <path d="M34 10 L38 14" stroke-dasharray="2 2" />
+          </svg>
+
+          <!-- Orbit loops -->
+          <svg class="doodle orbit-loop-1" viewBox="0 0 300 100" width="400" height="150" fill="none" stroke="currentColor" stroke-dasharray="5 5" opacity="0.25">
+            <path d="M10 80 C100 10, 200 10, 290 80" />
+          </svg>
+        </div>
+
+        <div class="hero-container container-full">
+          <div class="hero-grid">
+            <!-- Left content section -->
+            <div class="hero-left-col">
+              <span class="hero-uppercase-sub animate-fade">Looking for</span>
+              <h1 class="hero-chalk-title animate-bounce-short uppercase">School Bags?</h1>
+              
+              <div class="hero-banner-divider-row animate-fade">
+                <span class="banner-spark-line-left"></span>
+                <span class="banner-divider-text">You Are At The Right Place</span>
+                <span class="banner-spark-line-right"></span>
+              </div>
+              
+              <h2 class="hero-welcome-heading animate-fade">
+                Welcome to <span class="highlight-sanchika font-sketch">Sanchika</span>
+              </h2>
+              
+              <p class="hero-tagline-text animate-fade">
+                Explore premium school bags, laptop bags from top brands.
+              </p>
+              
+              <!-- CTA buttons row -->
+              <div class="hero-cta-button-group animate-fade">
+                <a href="#catalog" class="hero-btn-filled animate-glow-btn" id="hero-shop-now-trigger">
+                  <i data-lucide="shopping-bag" class="button-icon-svg"></i>
+                  <span>Shop Now</span>
+                </a>
+                <a href="#catalog" class="hero-btn-outlined" id="hero-explore-trigger">
+                  <i data-lucide="grid" class="button-icon-svg"></i>
+                  <span>Explore Collections</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right product cutouts floating column -->
+            <div class="hero-right-col animate-fade">
+              <div class="floating-products-wrapper">
+                <!-- Outer backglow pulse -->
+                <div class="backglow-aurora"></div>
+
+                <!-- Bag 1: Galaxy Backpack -->
+                <div class="floating-bag-item bag-galaxy" id="hero-bag-galaxy">
+                  <div class="bag-shadow-elliptical animate-shadow-pulse"></div>
+                  <img src="/assets/images/Junior_product2.png" alt="Arctic Fox Galaxy Backpack" class="hero-backpack-photoImg" referrerPolicy="no-referrer">
+                  <span class="bag-float-tag bg-blue-tag">Galaxy Edition</span>
+                </div>
+
+                <!-- Bag 2: Bitsy Backpack -->
+                <div class="floating-bag-item bag-bitsy" id="hero-bag-bitsy">
+                  <div class="bag-shadow-elliptical animate-shadow-pulse"></div>
+                  <img src="/assets/images/Junior_product3.png" alt="Arctic Fox Bitsy Backpack" class="hero-backpack-photoImg" referrerPolicy="no-referrer">
+                  <span class="bag-float-tag bg-yellow-tag">Blossom Kids</span>
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glassmorphism Bottom Brand Bar -->
+        <div class="hero-category-bar animate-fade">
+          <div class="category-bar-title font-sans">Shop by Brand</div>
+          <div class="category-bar-container scrollbar-hidden">
+
+            <button class="category-bar-item" data-brand="Genie">
+              <div class="category-icon-glow">
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 4L5 12L12 6L19 12L22 4L17 8L12 2L7 8Z" />
+                  <circle cx="2" cy="3" r="1" fill="currentColor" />
+                  <circle cx="12" cy="1" r="1" fill="currentColor" />
+                  <circle cx="22" cy="3" r="1" fill="currentColor" />
+                  <path d="M5 17Q12 21 19 17" />
+                  <path d="M9 20L15 20" />
+                </svg>
+              </div>
+              <span class="category-item-label">Genie</span>
+            </button>
+            <button class="category-bar-item" data-brand="Skybags Junior">
+              <div class="category-icon-glow">
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21C12 21, 6 15, 6 10C6 6.7 8.7 4 12 4C15.3 4 18 6.7 18 10C18 15, 12 21, 12 21Z" />
+                  <rect x="10" y="21" width="4" height="2" rx="0.5" />
+                  <line x1="9.5" y1="18" x2="10" y2="21" />
+                  <line x1="14.5" y1="18" x2="14" y2="21" />
+                  <path d="M12 4C10 8, 10 12, 12 21" stroke-dasharray="1 1" />
+                  <path d="M9 6C10 10, 11 14, 12 18" />
+                  <path d="M15 6C14 10, 13 14, 12 18" />
+                </svg>
+              </div>
+              <span class="category-item-label">Skybags Junior</span>
+            </button>
+            <button class="category-bar-item" data-brand="Safari">
+              <div class="category-icon-glow">
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2L15 12L12 10L9 12Z" fill="currentColor" />
+                  <path d="M12 22L9 12L12 14L15 12Z" />
+                  <circle cx="5" cy="5" r="0.8" fill="currentColor" />
+                  <circle cx="19" cy="19" r="0.8" fill="currentColor" />
+                </svg>
+              </div>
+              <span class="category-item-label">Safari</span>
+            </button>
+            <button class="category-bar-item" data-brand="Harry Potter">
+              <div class="category-icon-glow">
+                <svg class="category-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="6.5" cy="14" r="4.5" />
+                  <circle cx="17.5" cy="14" r="4.5" />
+                  <path d="M11 14C12 12, 13 12, 14 14" />
+                  <path d="M2.5 14Q1.5 12, 1 10" />
+                  <path d="M21.5 14Q22.5 12, 23 10" />
+                  <path d="M13.5 2L8 8H13L11.5 13.5L17 7.5H12Z" fill="currentColor" />
+                </svg>
+              </div>
+              <span class="category-item-label">Harry Potter</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Catalog Showcase Section -->
+      <section class="catalog-section" id="catalog">
+        <div class="container-full">
+          
+          <!-- Filters and Controls Area -->
+          <div class="filters-container-wrapper">
+            <div class="filter-header-bar">
+              <div class="filter-title-wrap">
+                <i data-lucide="sliders-horizontal" class="filter-headline-icon"></i>
+                <h2>Filter Catalog</h2>
+              </div>
+              
+              <!-- Quick Stats Bar inside Control Panel -->
+              <div class="stats-counter-panel" id="catalog-stats-bar">
+                <div class="stat-element">
+                  <span class="stat-label">Total Stock</span>
+                  <span class="stat-value" id="stats-total-products">0</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-element">
+                  <span class="stat-label">Filtered</span>
+                  <span class="stat-value text-accent" id="stats-shown-products">0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prominent Live Search Highlight Bar -->
+            <div class="catalog-search-highlight-bar animate-fade">
+              <div class="catalog-search-wrapper">
+                <i data-lucide="search" class="catalog-search-icon"></i>
+                <input type="text" id="product-search-input" placeholder="Search school bags, trolley bags, categories, or brands..." aria-label="Search catalog instantly" autocomplete="off">
+                <button id="search-clear-btn" class="search-clear-btn hidden" title="Clear query" aria-label="Clear Search Input">
+                  <i data-lucide="x"></i>
+                </button>
+                <div id="search-spinner-icon" class="search-spinner-icon hidden" title="Searching...">
+                  <div class="search-spinner-circle"></div>
+                </div>
+              </div>
+              
+              <!-- Mobile-Only Filter Trigger Button -->
+              <button id="mobile-filter-trigger" class="mobile-filter-trigger-btn" aria-label="Open Filters Panel">
+                <i data-lucide="sliders-horizontal"></i>
+                <span>Filters</span>
+              </button>
+              <div id="search-suggestions-box" class="search-suggestions-box hidden"></div>
+            </div>
+
+            <!-- Mobile Bottom Sheet Backdrop Overlay -->
+            <div id="bottom-sheet-overlay" class="bottom-sheet-overlay"></div>
+
+            <!-- Filter Dropdowns Grid / Bottom Sheet -->
+            <div class="filters-grid" id="filters-grid">
+              <!-- Mobile Bottom Sheet Drag Handle and Close Row -->
+              <div class="mobile-sheet-header">
+                <div class="sheet-drag-handle"></div>
+                <div class="sheet-title-row">
+                  <h3>Filter Catalog</h3>
+                  <button id="mobile-sheet-close" class="sheet-close-btn" aria-label="Close Filters">
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Category Filter -->
+              <div class="filter-group">
+                <label for="filter-category" class="filter-label">Category</label>
+                <div class="custom-select-wrapper">
+                  <i data-lucide="grid" class="select-prefix-icon"></i>
+                  <select id="filter-category" aria-label="Filter by Category">
+                    <option value="All">All Categories</option>
+                    <option value="School Bags">School Bags</option>
+                    <option value="Laptop Bags">Laptop Bags</option>
+                    <option value="Travel Bags">Travel Bags</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Brand Filter -->
+              <div class="filter-group">
+                <label for="filter-brand" class="filter-label">Brand</label>
+                <div class="custom-select-wrapper">
+                  <i data-lucide="tag" class="select-prefix-icon"></i>
+                  <select id="filter-brand" aria-label="Filter by Brand">
+                    <option value="All">All Brands</option>
+                    <option value="Genie">Genie</option>
+                    <option value="Skybags Junior">Skybags Junior</option>
+                    <option value="Safari">Safari</option>
+                    <option value="Harry Potter">Harry Potter</option>
+                    <option value="Arctic Fox">Arctic Fox</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Price Filter Range -->
+              <div class="filter-group">
+                <label for="filter-price" class="filter-label">Price Constraint</label>
+                <div class="custom-select-wrapper">
+                  <i data-lucide="indian-rupee" class="select-prefix-icon"></i>
+                  <select id="filter-price" aria-label="Filter by Price Budget">
+                    <option value="All">All Prices</option>
+                    <option value="under-500">Under ₹500</option>
+                    <option value="500-1000">₹500 – ₹1000</option>
+                    <option value="1000-2000">₹1000 – ₹2000</option>
+                    <option value="above-2000">Above ₹2000</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Color Filter -->
+              <div class="filter-group">
+                <label for="filter-color" class="filter-label">Color</label>
+                <div class="custom-select-wrapper">
+                  <i data-lucide="palette" class="select-prefix-icon"></i>
+                  <select id="filter-color" aria-label="Filter by Color">
+                    <option value="All">All Colors</option>
+                    <option value="Black">Black</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Grey">Grey</option>
+                    <option value="Orange">Orange</option>
+                    <option value="White">White</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Navy Blue">Navy Blue</option>
+                    <option value="Aqua Blue">Aqua Blue</option>
+                    <option value="Dark Denim">Dark Denim</option>
+                    <option value="Sea Spray">Sea Spray</option>
+                    <option value="Grape Mist">Grape Mist</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Mint">Mint</option>
+                    <option value="Rainbow">Rainbow</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Capacity Filter -->
+              <div class="filter-group">
+                <label for="filter-capacity" class="filter-label">Capacity</label>
+                <div class="custom-select-wrapper">
+                  <i data-lucide="package" class="select-prefix-icon"></i>
+                  <select id="filter-capacity" aria-label="Filter by Capacity">
+                    <option value="All">All Capacities</option>
+                    <option value="15L">15L</option>
+                    <option value="20L">20L</option>
+                    <option value="21L">21L</option>
+                    <option value="22L">22L</option>
+                    <option value="25L">25L</option>
+                    <option value="30L">30L</option>
+                    <option value="45L">45L</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Reset Action Buttons -->
+              <div class="filter-group align-end">
+                <button id="clear-filters-btn" class="clear-action-btn" title="Reset all search parameters">
+                  <i data-lucide="rotate-ccw" class="reset-icon"></i>
+                  <span>Clear All Filters</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Active Tag Badges display area -->
+            <div id="active-tokens-area" class="active-tokens-row hidden">
+              <span class="active-token-title">Active parameters:</span>
+              <div id="active-tokens-list" class="tokens-list">
+                <!-- Injected dynamically by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Gallery Wrapper -->
+          <div id="catalog-products-showcase" class="product-gallery-wrapper">
+            
+            <!-- Product Counter Wrapper -->
+            <div class="product-counter-container animate-fade">
+              <p id="product-counter-label" class="product-counter-label">Showing <span id="counter-shown" class="font-mono text-accent">0</span> of <span id="counter-total" class="font-mono">0</span> Products</p>
+            </div>
+
+            <!-- Loading Spinner State (Preloader) -->
+            <div id="catalog-loading-spinner" class="spinner-overlay">
+              <div class="modern-spinner"></div>
+              <p class="spinner-text">Grooming our finest collection...</p>
+            </div>
+
+            <!-- No Results Matching State -->
+            <div id="catalog-no-results" class="no-results-state hidden">
+              <div class="no-results-illustration">
+                <i data-lucide="search-code" class="empty-icon-art"></i>
+                <div class="illustration-circle"></div>
+              </div>
+              <h3>No bags found. </h3>
+        
+              <button id="no-results-reset-btn" class="premium-btn primary">
+                <i data-lucide="rotate-ccw"></i>
+                Reset Search Filters
+              </button>
+            </div>
+
+            <!-- Dynamic Grid Workspace -->
+            <div id="products-grid-view" class="products-grid-container">
+              <!-- Injected dynamically by script.js -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+    </main>
+
+    <!-- Product Details Immersive Modal Frame -->
+    <div id="product-detail-modal" class="modal-backdrop-layer">
+      <div id="modal-container-card" class="modal-interactive-card">
+        <!-- Close button right corner -->
+        <button id="modal-close-trigger" class="modal-close-button-absolute" aria-label="Close Product Gallery Detail">
+          <i data-lucide="x"></i>
+        </button>
+
+        <div class="modal-layout-grid">
+          <!-- Left Visual: product photo with bookmark trigger -->
+          <div class="modal-visual-column">
+            <span class="modal-badge-category" id="modal-bag-category-badge">Laptop Bag</span>
+            <div class="modal-image-glow-backing"></div>
+            <img src="" id="modal-bag-display-image" class="modal-image" alt="Bag details image viewport" referrerPolicy="no-referrer">
+            <button class="modal-wishlist-toggle" id="modal-wishlist-toggle-action">
+              <i data-lucide="heart" class="modal-heart-icon"></i>
+            </button>
+          </div>
+
+          <!-- Right Content: Information descriptions, technical specs, call properties -->
+          <div class="modal-info-column">
+            <div class="modal-info-header">
+              <span class="modal-brand-tag" id="modal-bag-brand">SANCHIKA ORIGINAL</span>
+              <h2 id="modal-bag-title" class="modal-heading">Premium Executive Backpack</h2>
+              <div class="modal-rating-row">
+                <div class="rating-stars" id="modal-rating-stars">
+                  <i data-lucide="star" class="starfilled"></i>
+                  <i data-lucide="star" class="starfilled"></i>
+                  <i data-lucide="star" class="starfilled"></i>
+                  <i data-lucide="star" class="starfilled"></i>
+                  <i data-lucide="star" class="starfilled-half"></i>
+                </div>
+                <span class="rating-counts" id="modal-rating-count">(4.8 rating based on 130 customers)</span>
+              </div>
+            </div>
+
+            <div class="modal-price-strip">
+              <span class="modal-price-tag" id="modal-bag-price">₹1,899</span>
+              <span class="modal-inclusive-text">Inclusive of GST and handling charges</span>
+            </div>
+
+            <div class="modal-description-box">
+              <h4>Crafted Insight</h4>
+              <p id="modal-bag-description">This laptop bag offers standard waterproof layers, robust zipper links, and comfortable air-mesh back sliders perfect for corporate travelers.</p>
+            </div>
+
+            <!-- Authentic Technical Specs Grid -->
+            <div class="modal-specifications-container">
+              <h4>Specifications Breakdown</h4>
+              <div class="specs-mini-grid">
+                <div class="spec-tile">
+                  <span class="tile-label">Weight Range</span>
+                  <span class="tile-desc" id="modal-spec-weight">650 grams (Ultra lightweight)</span>
+                </div>
+                <div class="spec-tile">
+                  <span class="tile-label">Compartments</span>
+                  <span class="tile-desc" id="modal-spec-compartments">3 Full Zip + Secret Pocket</span>
+                </div>
+                <div class="spec-tile">
+                  <span class="tile-label">Warranty Frame</span>
+                  <span class="tile-desc" id="modal-spec-warranty">1 Year Sanchika Assurance</span>
+                </div>
+                <div class="spec-tile">
+                  <span class="tile-label">Water Resistance</span>
+                  <span class="tile-desc" id="modal-spec-resistance">Ballistic Water-Repellent Layer</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Intersecting purchase button links -->
+            <div class="modal-action-row-buttons">
+              <!-- WhatsApp Quick order direct link -->
+              <a href="#" id="modal-whatsapp-direct-link" target="_blank" rel="noopener noreferrer" class="modal-btn-buy whatsapp-theme">
+                <i data-lucide="phone-call" class="btn-icon"></i>
+                <span>Buy via WhatsApp Inquire</span>
+              </a>
+
+              <!-- Share and Bookmark actions -->
+              <button id="modal-share-link-action" class="modal-btn-util" title="Copy Product Direct Reference">
+                <i data-lucide="share-2"></i>
+                <span>Copy Share Link</span>
+              </button>
+            </div>
+            
+            <!-- Toast Copy Alert Notification inside Info column -->
+            <div id="modal-toast-notice" class="toast-notice hidden">
+              <i data-lucide="check-circle" class="toast-success-icon"></i>
+              <span>Product share link copied directly!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll To Top button -->
+    <button id="scroll-to-top-btn" class="scroll-top-button" aria-label="Scroll back to page top" title="Scroll to Top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Section 3 — Premium Footer (Merged with CTA Strip) -->
+    <footer class="cta-gradient-strip sanchika-premium-footer" id="contact">
+      <div class="container-full">
+
+        <div class="footer-grid-layout-new footer-equal-sections">
+          <!-- Left Column: Instagram and WhatsApp Buttons -->
+          <div class="footer-left-side-custom">
+            <!-- Comfort heading & Slogan -->
+            <div class="cta-text-content">
+              <h2>Comfort, Quality, Confidence</h2>
+              <p class="parent-attract-slogan">
+                Every School Day Starts with <span class="highlight-sanchika-cta">Sanchika</span>
+              </p>
+            </div>
+
+            <div class="social-links-new">
+              <a href="https://www.instagram.com/sanchika_bagshub?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-icon-new ig follow-instagram-btn" title="Follow us on Instagram">
+                <svg class="insta-logo-svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px; min-width: 18px; display: inline-block; color: #ffffff;">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span class="follow-text">Follow us on Instagram</span>
+              </a>
+              <a href="https://chat.whatsapp.com/D7j6OJQDMk5BrzbJ6RyL1y" target="_blank" rel="noopener noreferrer" class="social-icon-new wa join-whatsapp-btn" title="Join WhatsApp Group">
+                <svg class="wa-logo-svg" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; min-width: 18px; display: inline-block; color: #ffffff;">
+                  <path d="M12.031 2C6.446 2 1.922 6.524 1.922 12.109c0 1.785.463 3.528 1.345 5.061l-1.43 5.225 5.344-1.4c1.472.802 3.129 1.222 4.848 1.224h.004c5.584 0 10.108-4.524 10.108-10.111C22.14 7.63 17.616 2 12.031 2zm0 1.748c4.618 0 8.36 3.743 8.361 8.361 0 2.238-.87 4.341-2.451 5.922-1.58 1.581-3.684 2.451-5.908 2.451h-.002c-1.977-.001-3.918-.53-5.613-1.528l-.403-.239-3.132.82.835-3.048-.263-.419C2.455 14.521 1.922 12.831 1.922 11.109c0-4.618 3.743-8.361 8.361-8.361zm-2.003 4.298c-.144-.002-.453.05-.689.31-.237.26-.902.883-.902 2.15 0 1.267.922 2.493 1.05 2.666.128.172 1.815 2.772 4.397 3.883.614.263 1.093.421 1.467.54.618.196 1.18.169 1.626.102.497-.074 1.53-.625 1.745-1.229.215-.604.215-1.121.151-1.229-.064-.108-.236-.172-.494-.302-.257-.13-1.53-.755-1.766-.84-.237-.087-.409-.13-.581.13-.172.26-.667.84-.817 1.013-.15.172-.301.194-.559.064-.258-.13-1.088-.4-2.072-1.278-.765-.683-1.282-1.527-1.432-1.785-.15-.258-.016-.398.113-.526.116-.116.258-.302.387-.453.129-.151.172-.259.258-.431.086-.173.043-.324-.022-.454-.064-.173.043-.324-.022-.454-.064-.13-.581-1.401-.796-1.92-.209-.504-.422-.433-.58-.44l-.497-.005z"/>
+                </svg>
+                <span class="follow-text">Join WhatsApp Group</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact info and Comfort header below it -->
+          <div class="footer-right-side-custom">
+            <!-- Contact info -->
+            <div class="footer-col contact-col">
+              <h4>Contact Info</h4>
+              <ul class="footer-contact-list-new">
+                <li>
+                  <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                  <span>Hyderabad, Telangana</span>
+                </li>
+                <li>
+                  <div class="contact-icon"><i data-lucide="phone"></i></div>
+                  <a href="tel:6309545434">+91 63095 45434</a>
+                </li>
+                <li>
+                  <div class="contact-icon"><i data-lucide="mail"></i></div>
+                  <a href="mailto:contact@sanchikabags.com">contact@sanchikabags.com</a>
+                </li>
+                <li>
+                  <div class="contact-icon"><i data-lucide="clock"></i></div>
+                  <span>Mon - Sat : 10 AM - 8 PM</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar-new">
+          <p class="copyright-text-new">&copy; 2026 Sanchika Bags. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Core Script Logic -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

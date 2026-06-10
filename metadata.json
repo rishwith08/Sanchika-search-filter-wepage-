@@ -1,0 +1,6 @@
+{
+  "name": "Sanchika Bags Collection",
+  "description": "A modern, premium e-commerce search and filter catalog for Sanchika Bags featuring instant real-time search, filters, loading states, and light/dark modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

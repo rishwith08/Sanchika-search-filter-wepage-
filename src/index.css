@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;750;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-funny: "Fredoka", sans-serif;
+  --font-hand: "Caveat", cursive, sans-serif;
+  --font-sketch: "Architects Daughter", cursive, sans-serif;
+}
+
+/* Custom whimsical hand-sketch utility classes */
+.sketchy-border {
+  border: 3px solid currentColor;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.sketchy-border-sm {
+  border: 2px solid currentColor;
+  border-radius: 120px 10px 110px 10px/10px 110px 10px 120px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(1deg); }
+  50% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-swing-gently {
+  animation: swing 4s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Striped handwritten letter text effect using SVG backgrounds or text shadow */
+.striped-text {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    currentColor 4px,
+    currentColor 6px
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.15));
+}
+
