@@ -10,7 +10,7 @@
     "capacity": "22L",
     "sku": "GN-DMY-LAV-022",
     "description": "A premium 22L Genie Dreamy Lavender School Backpack representing its elegant lavender theme with dreamscape motifs, double-cushioned shoulder support, and waterproof outer lining, valued at ₹1,699.",
-    "image": "/assets/images/genie_product1.png",
+    "image": "/images/genie_product1.png",
     "specs": {
       "weight": "450g (Lightweight build)",
       "compartments": "3 Main Chambers + Secret Front Pocket",
@@ -29,7 +29,7 @@
     "capacity": "20L",
     "sku": "GN-FLT-PNK-020",
     "description": "A vibrant 20L Genie Classic Kids Flutter Pink Backpack designed with adorable butterfly charms and adjustable spine-relief shoulder straps, representing outstanding rose-pink kid styles for ₹1,499.",
-    "image": "/assets/images/genie_product2.png",
+    "image": "/images/genie_product2.png",
     "specs": {
       "weight": "420g (Ergonomic schoolpack)",
       "compartments": "2 Large Compartments + Side Mesh Sleeve",
@@ -48,7 +48,7 @@
     "capacity": "21L",
     "sku": "GN-SPK-MNT-021",
     "description": "An exquisite 21L Genie Sparkle Mint School Bag featuring a refreshing mint green colorway, custom zipper pullers, and comfortable back cushion pads for ₹1,599.",
-    "image": "/assets/images/genie_product3.png",
+    "image": "/images/genie_product3.png",
     "specs": {
       "weight": "440g (Air-flow mesh back)",
       "compartments": "3 Book Shelves + Internal Stationery Grid",
@@ -67,7 +67,7 @@
     "capacity": "22L",
     "sku": "GN-RBF-GRN-022",
     "description": "A majestic 22L Genie Green Fantasy Daypack showing a gorgeous green colorway, built to hold heavy volumes with comfortable posture support for ₹1,799.",
-    "image": "/assets/images/genie_product4.png",
+    "image": "/images/genie_product4.png",
     "specs": {
       "weight": "480g (High Volume Carrier)",
       "compartments": "3 Compartments + Padded Notebook Divider",
@@ -86,7 +86,7 @@
     "capacity": "25L",
     "sku": "GN-CPC-NVY-025",
     "description": "At ₹1,899, this deluxe 25L Genie Classic Navy Blue Comfort Pack features sleek navy blue aesthetics, lightweight ergonomic shoulder straps, a spacious double compartment, and a secure internal laptop sleeve.",
-    "image": "/assets/images/genie_product5.png",
+    "image": "/images/genie_product5.png",
     "specs": {
       "weight": "510g (UltraComfort design)",
       "compartments": "3 Sections + Quick-access Passport Pocket",
@@ -105,7 +105,7 @@
     "capacity": "20L",
     "sku": "GN-CMS-BLK-020",
     "description": "A classic black 20L Genie Cosmic Starlet backpack covered in astronomical constellation prints, robust glide zippers, and protective chest support, priced at ₹1,399.",
-    "image": "/assets/images/genie_product6.png",
+    "image": "/images/genie_product6.png",
     "specs": {
       "weight": "430g (Slim travel daypack)",
       "compartments": "2 Main Pockets + Easy-Access Front Organizer",
@@ -124,7 +124,7 @@
     "capacity": "21L",
     "sku": "GN-PSO-LAV-021",
     "description": "Chic and stylish, this 21L Genie Pastel Lavender Ombre features a whimsical pastel lavender gradient on high-density water-resistant canvas, a supreme modern fashion statement for ₹1,549.",
-    "image": "/assets/images/genie_product7.png",
+    "image": "/images/genie_product7.png",
     "specs": {
       "weight": "460g (Balanced stress straps)",
       "compartments": "3 Main Compartments + Stationery Holster",
@@ -143,7 +143,7 @@
     "capacity": "22L",
     "sku": "GN-BSG-BLK-022",
     "description": "A delightful black 22L Genie Blossom Glitz pack decorated with shining black blossom glares, cozy S-straps, and abrasion-resistant base protection for ₹1,649.",
-    "image": "/assets/images/genie_product8.png",
+    "image": "/images/genie_product8.png",
     "specs": {
       "weight": "470g (Lumbar cushion core)",
       "compartments": "3 Chambers + Dual Quick-Access Nets",
@@ -162,7 +162,7 @@
     "capacity": "15L",
     "sku": "SBJ-DNA-YLW-015",
     "description": "A vibrant yellow dinosaur-infused 15L Skybags Junior adventure daypack featuring cute custom dino illustration, twin active zip sections, and spine ergonomics for kids, priced at ₹999.",
-    "image": "/assets/images/Junior_product1.png",
+    "image": "/images/Junior_product1.png",
     "specs": {
       "weight": "380g (Safe pediatric size)",
       "compartments": "2 Compartments + Front Lunchbox Section",
@@ -181,7 +181,7 @@
     "capacity": "21L",
     "sku": "SBJ-CMS-BLK-021",
     "description": "An outstanding space-themed 21L Skybags Junior Cosmic Galaxy black bag depicting spaceships, planets, and moons, elevated with night safety reflectives for ₹1,099.",
-    "image": "/assets/images/Junior_product2.png",
+    "image": "/images/Junior_product2.png",
     "specs": {
       "weight": "400g (Constellation safety loop)",
       "compartments": "2 Main Shelves + Fleece Tablet Slip",
@@ -200,7 +200,7 @@
     "capacity": "15L",
     "sku": "SBJ-BSM-BLU-015",
     "description": "A whimsical blue 15L Skybags Junior pack featuring colorful flowers, cute clouds, and a sky field. Equipped with curved chest guards and lightweight bottle mesh for ₹1,199.",
-    "image": "/assets/images/Junior_product3.png",
+    "image": "/images/Junior_product3.png",
     "specs": {
       "weight": "390g (Featherlite structure)",
       "compartments": "2 Main Compartments + Magic Key clip",
@@ -219,7 +219,7 @@
     "capacity": "22L",
     "sku": "SBJ-HIF-BLK-022",
     "description": "An energetic black 22L Skybags Junior High-Flyer Spacer displaying high-flying fighter jet silhouettes on rugged micro-ripstop black fabric, lined with thick cushioning for ₹1,299.",
-    "image": "/assets/images/Junior_product4.png",
+    "image": "/images/Junior_product4.png",
     "specs": {
       "weight": "410g (Vibrating load cushion)",
       "compartments": "2 Large Book Chambers + Front Stationery Chest",
@@ -238,7 +238,7 @@
     "capacity": "25L",
     "sku": "SF-QST-NVY-025",
     "description": "A heavy-duty 25L Safari Quest Navy Blue Rugged School Pack crafted from thick navy blue puncture-resistant texturized nylon. Features multi-pocket compartments and base protectors, costing ₹1,899.",
-    "image": "/assets/images/safari_product1.png",
+    "image": "/images/safari_product1.png",
     "specs": {
       "weight": "590g (Extreme wear guard)",
       "compartments": "3 Heavy ZIP Sections + Bottle Sleeves",
@@ -257,7 +257,7 @@
     "capacity": "45L",
     "sku": "SF-TRB-BLK-045",
     "description": "An adventurous black 45L Safari Trailblazer Classic Rucksack featuring heavy tactical black canvas, side mount compression systems, and durable hiking gears for ₹2,499.",
-    "image": "/assets/images/safari_product2.png",
+    "image": "/images/safari_product2.png",
     "specs": {
       "weight": "980g (High-capacity frame)",
       "compartments": "1 Massive Main Bay + Dynamic Lid Pocket",
@@ -276,7 +276,7 @@
     "capacity": "30L",
     "sku": "SF-STR-GRY-030",
     "description": "An ultra-sleek grey 30L Safari Streamline professional office pack. Features space gray waterproof coating, laptop shielding, and comfortable contour straps, priced at ₹2,199.",
-    "image": "/assets/images/safari_product3.png",
+    "image": "/images/safari_product3.png",
     "specs": {
       "weight": "640g (Anti-shock laptop shield)",
       "compartments": "15.6 Inch Tech Deck + Hidden Wallet Safe",
@@ -295,7 +295,7 @@
     "capacity": "25L",
     "sku": "SF-UBS-BLU-025",
     "description": "A formal blue 25L Safari Urban Scout business backpack. Combines deep-blue waterproof weaves with multi-compartments and useful luggage pass-through loops for ₹1,999.",
-    "image": "/assets/images/safari_product4.png",
+    "image": "/images/safari_product4.png",
     "specs": {
       "weight": "600g (Balanced lumbar support)",
       "compartments": "2 Main Compartments + Front Cable Sleaving",
@@ -314,7 +314,7 @@
     "capacity": "22L",
     "sku": "SF-HPG-YLW-022",
     "description": "An official 22L Harry Potter Gryffindor yellow backpack decorated with golden sigils and classic brave yellow highlights, complete with spellbound wand loops for ₹2,299.",
-    "image": "/assets/images/harrypotter_product1.png",
+    "image": "/images/harrypotter_product1.png",
     "specs": {
       "weight": "520g (Hogwarts premium canvas)",
       "compartments": "3 Heavy Compartments + Magic Wand Slot",
@@ -333,7 +333,7 @@
     "capacity": "25L",
     "sku": "SF-HPE-BLK-025",
     "description": "An immersive black 25L Harry Potter Hogwarts Express schoolpack featuring Platform 9 3/4 seals, brass zipper pulls, and retro black highlights, costing ₹2,399.",
-    "image": "/assets/images/harrypotter_product2.png",
+    "image": "/images/harrypotter_product2.png",
     "specs": {
       "weight": "540g (Reinforced ergonomic back)",
       "compartments": "3 Spacious Rooms + Laptop Holder + Key Retention",
@@ -352,7 +352,7 @@
     "capacity": "22L",
     "sku": "FJUBPKBLKWF649022",
     "description": "A cosmic 22L Arctic Fox Galaxy black backpack depicting deep space stars and blue galaxy prints, designed with high-capacity pockets for ₹1,799.",
-    "image": "/assets/images/Junior_product2.png",
+    "image": "/images/Junior_product2.png",
     "specs": {
       "weight": "460g (Balanced stress straps)",
       "compartments": "3 Compartments + Padded Notebook Divider",
@@ -371,7 +371,7 @@
     "capacity": "30L",
     "sku": "AF-APX-BLU-030",
     "description": "A sleek blue 30L Arctic Fox Apex Laptop Bag featuring robust navy blue waterproof styling, a padded 15.6 inch gear cabin, and custom utility pullers for ₹2,199.",
-    "image": "/assets/images/safari_product3.png",
+    "image": "/images/safari_product3.png",
     "specs": {
       "weight": "610g (UltraComfort design)",
       "compartments": "2 Tech Chambers + Front Accessory Net",
